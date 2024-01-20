@@ -6,9 +6,6 @@ Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki il
 - Depoyu klonlayın:
     - `git clone https://github.com/melsagin/raisin.git`
 
-- Gerekli Python paketlerini yükleyin:
-    - `pip install -r requirements.txt`
-
 ## Dosyaların İçeriği
 - analysis.ipynb
     - İçe aktarılan fonksiyonlar çağrılarak çalışma prensibi analiz edilir
@@ -23,8 +20,6 @@ At this point, my goal is to first understand the relationship between the featu
 ## Installation
 - Clone the repository:
     - `git clone https://github.com/melsagin/raisin.git`
-- Install the required Python packages:
-    - `pip install -r requirements.txt`
 
 ## File Contents
 - analysis.ipynb
