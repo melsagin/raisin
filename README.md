@@ -7,6 +7,9 @@ Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki il
 - Depoyu klonlayın:
     - `git clone https://github.com/melsagin/raisin.git`
 
+## Gereksinimler
+Scripti çalıştırmadan önce, requirements.txt içerisindeki kütüphaneleri içe aktarmayı unutmayınız.
+
 ## Dosyaların İçeriği
 - analysis.ipynb
     - İçe aktarılan fonksiyonlar çağrılarak çalışma prensibi analiz edilir
@@ -21,6 +24,9 @@ At this point, my goal is to first understand the relationship between the featu
 ## Installation
 - Clone the repository:
     - `git clone https://github.com/melsagin/raisin.git`
+
+## Requirements
+Before running the script, make sure to import the libraries in the requirements.txt file.
 
 ## File Contents
 - analysis.ipynb
