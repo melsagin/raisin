@@ -17,19 +17,19 @@ Bir elips için eksantriklik, şeklin mükemmel bir daire olmaktan ne kadar sapk
 - Eksantriklik tam olarak 1 ise, şekil bir paraboladır.
 - Eksantriklik 1'den büyükse, şekil bir hiperbol olur.
 
-# Projeinin Amacı
+## Projeinin Amacı
 Veri setindeki iki çeşit kuru üzümün diğer morfolojik özelliklerden yola çıkarak doğru tahmin edilmesi Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki ilişkiyi veri görselleştirme yöntemleriyle anlamayı daha sonra ise makine öğrenmesi algoritmalarından Logistic Regression, KNN ve SVM tercih edilerek üzüm çeşitlerini diğer özelliklere bağlı kalarak tahmin etmeyi amaçlamaktayım. Sonunda da kullanılan makine öğrenmesi algoritmalarının performanslarını değerlendirmeyi amaçlamaktayım.
 
-# Problem ve Önemi
+## Problem ve Önemi
 Tarım ve gıda sektöründe kuru üzüm çeşitlerini doğru bir şekilde tahmin etmek, üreticilere ve işletmelere kalite kontrol süreçlerinde yardımcı olabilir. Bu, üretim süreçlerini optimize etme, kaynakları verimli kullanma ve nihai ürün kalitesini artırma açısından kritik bir öneme sahiptir.
 
-# Ön Analiz Bulguları
+## Ön Analiz Bulguları
 Kuru üzüm çeşitlerinin belirli özellikler üzerinden ayrıştırılabileceğini ve bu özelliklerin tahmin modeline entegre edilebileceğini görüldü.
 
-# Veri Temizleme
+## Veri Temizleme
 Veri temizleme aşamasında karşılaşılan zorluklar arasında aykırı değerler yer alıyordu. Bu zorluğu aşmak için aykırı değerleri filtreleme yöntemi kullanılarak düzeltme yoluna girildi.
 
-# Model Seçimi ve Sonuçlar:
+## Model Seçimi ve Sonuçlar:
 Model seçim sürecinde, çeşitli makine öğrenimi modelleri değerlendirildi. Bu modeller, veri setindeki özellikleri kullanarak kuru üzüm çeşitlerini başarıyla tahmin edebiliyor. Modellerin başarı oranları üzerinden yapılan testlerde, yüksek doğruluk ve hassasiyet elde edildi.
 
 ## Kurulum
