@@ -4,6 +4,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd
+import numpy as np
 
 def evaluation_metric(model, X_train, y_train, X_test, y_test):
     y_train_pred = model.predict(X_train)
@@ -56,3 +57,20 @@ def find_best_k(X_train, y_train, max_k=20):
             best_score = mean_score
             best_k = k
     return best_k
+
+# 2 veya daha fazla aykırı değer içeren satırları kaldırmak için bir fonksiyon tanımla
+def remove_outliers(X, y):
+   # Her sütun için çeyreklikleri hesapla
+    q1 = np.percentile(X, 25, axis=0)
+    q3 = np.percentile(X, 75, axis=0)
+    # Her sütun için IQR'yi hesapla
+    iqr = q3 - q1
+    # Aykırı değerler için alt ve üst sınırları hesapla
+    lower_bound = q1 - 1.5 * iqr
+    upper_bound = q3 + 1.5 * iqr
+    # Her satırdaki aykırı değerlerin sayısını hesapla
+    num_outliers = np.sum((X < lower_bound) | (X > upper_bound), axis=1)
+    # 2'den fazla aykırı değer içeren satırları kaldır
+    X_clean = X[num_outliers <= 2]
+    y_clean = y[num_outliers <= 2]
+    return X_clean, y_clean
