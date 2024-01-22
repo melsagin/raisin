@@ -17,6 +17,8 @@ Bir elips için eksantriklik, şeklin mükemmel bir daire olmaktan ne kadar sapk
 - Eksantriklik tam olarak 1 ise, şekil bir paraboladır. 
 - Eksantriklik 1'den büyükse, şekil bir hiperbol olur.
 
+
+
 # Projenin Amacı
 Veri setindeki iki çeşit kuru üzümün diğer morfolojik özelliklerden yola çıkarak doğru tahmin edilmesi
 Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki ilişkiyi veri görselleştirme yöntemleriyle anlamayı daha sonra ise makine öğrenmesi algoritmalarından Logistic Regression, KNN ve SVM tercih edilerek üzüm çeşitlerini diğer özelliklere bağlı kalarak tahmin etmeyi amaçlamaktayım. Sonunda da kullanılan makine öğrenmesi algoritmalarının performanslarını değerlendirmeyi amaçlamaktayım.
