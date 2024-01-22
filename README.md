@@ -3,9 +3,6 @@ Bu çalışmadaki veriseti, Türkiye'de yetiştirilen iki farklı kuru üzüm ç
 
 Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki ilişkiyi veri görselleştirme yöntemleriyle anlamayı daha sonra ise makine öğrenmesi algoritmalarından Logistic Regression, KNN ve SVM tercih edilerek üzüm çeşitlerini diğer özelliklere bağlı kalarak tahmin etmeyi amaçlamaktayım. Sonunda da kullanılan makine öğrenmesi algoritmalarının performanslarını değerlendirmeyi amaçlamaktayım.
 
-![Area](https://github.com/melsagin/raisin/assets/95714510/eb50a36a-4e37-4992-a9c4-295359b0df90)
-
-
 ## Kurulum
 - Depoyu klonlayın:
     - `git clone https://github.com/melsagin/raisin.git`
