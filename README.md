@@ -34,7 +34,7 @@ Scripti çalıştırmadan önce, requirements.txt içerisindeki kütüphaneleri 
 Veri setindeki iki çeşit kuru üzümün diğer morfolojik özelliklerden yola çıkarak doğru tahmin edilmesi.
 
 ## Problem ve Önemi
-Tarım ve gıda sektöründe kuru üzüm çeşitlerini doğru bir şekilde tahmin etmek, üreticilere ve işletmelere kalite kontrol süreçlerinde yardımcı olabilir. Bu, üretim süreçlerini optimize etme, kaynakları verimli kullanma ve nihai ürün kalitesini artırma açısından kritik bir öneme sahiptir.
+Tarım ve gıda sektöründe kuru üzüm çeşitlerini doğru bir şekilde tahmin etmek, üreticilere ve işletmelere kalite kontrol süreçlerinde yardımcı olabilir. Bu; üretim süreçlerini optimize etme, kaynakları verimli kullanma ve nihai ürün kalitesini artırma açısından kritik bir öneme sahiptir.
 
 ## Projenin Hedefleri
 Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki ilişkiyi veri görselleştirme yöntemleriyle anlamayı daha sonra ise makine öğrenmesi algoritmalarından Logistic Regression, KNN ve SVM tercih edilerek üzüm çeşitlerini diğer özelliklere bağlı kalarak tahmin etmeyi hedeflemekteyim. Sonunda da kullanılan makine öğrenmesi algoritmalarının performanslarını değerlendirmeyi hedefliyorum.
