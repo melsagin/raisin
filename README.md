@@ -17,21 +17,6 @@ Bir elips için eksantriklik, şeklin mükemmel bir daire olmaktan ne kadar sapk
 - Eksantriklik tam olarak 1 ise, şekil bir paraboladır.
 - Eksantriklik 1'den büyükse, şekil bir hiperbol olur.
 
-## Projeinin Amacı
-Veri setindeki iki çeşit kuru üzümün diğer morfolojik özelliklerden yola çıkarak doğru tahmin edilmesi Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki ilişkiyi veri görselleştirme yöntemleriyle anlamayı daha sonra ise makine öğrenmesi algoritmalarından Logistic Regression, KNN ve SVM tercih edilerek üzüm çeşitlerini diğer özelliklere bağlı kalarak tahmin etmeyi amaçlamaktayım. Sonunda da kullanılan makine öğrenmesi algoritmalarının performanslarını değerlendirmeyi amaçlamaktayım.
-
-## Problem ve Önemi
-Tarım ve gıda sektöründe kuru üzüm çeşitlerini doğru bir şekilde tahmin etmek, üreticilere ve işletmelere kalite kontrol süreçlerinde yardımcı olabilir. Bu, üretim süreçlerini optimize etme, kaynakları verimli kullanma ve nihai ürün kalitesini artırma açısından kritik bir öneme sahiptir.
-
-## Ön Analiz Bulguları
-Kuru üzüm çeşitlerinin belirli özellikler üzerinden ayrıştırılabileceğini ve bu özelliklerin tahmin modeline entegre edilebileceğini görüldü.
-
-## Veri Temizleme
-Veri temizleme aşamasında karşılaşılan zorluklar arasında aykırı değerler yer alıyordu. Bu zorluğu aşmak için aykırı değerleri filtreleme yöntemi kullanılarak düzeltme yoluna girildi.
-
-## Model Seçimi ve Sonuçlar:
-Model seçim sürecinde, çeşitli makine öğrenimi modelleri değerlendirildi. Bu modeller, veri setindeki özellikleri kullanarak kuru üzüm çeşitlerini başarıyla tahmin edebiliyor. Modellerin başarı oranları üzerinden yapılan testlerde, yüksek doğruluk ve hassasiyet elde edildi.
-
 ## Kurulum
 - Depoyu klonlayın:
     - `git clone https://github.com/melsagin/raisin.git`
@@ -45,10 +30,39 @@ Scripti çalıştırmadan önce, requirements.txt içerisindeki kütüphaneleri 
 - method.py 
     - Fonksiyonları içerir
 
-# Raisin Data
-In this study, a dataset comprising equal numbers of two different types of raisins grown in Turkey (Keçimen and Besni) was examined. The aim was to distinguish between the two types using a machine vision system, and a total of 900 raisins, 450 from each variety, were analyzed. These images underwent various preprocessing steps, and 7 morphological features were extracted using image processing techniques.
+## Projeinin Amacı
+Veri setindeki iki çeşit kuru üzümün diğer morfolojik özelliklerden yola çıkarak doğru tahmin edilmesi.
 
-At this point, my goal is to first understand the relationship between the features through data visualization methods using this dataset. Subsequently, I aim to predict the raisin varieties while considering other features, using machine learning algorithms such as Logistic Regression, KNN, and SVM. Finally, I intend to evaluate the performance of the machine learning algorithms used.
+## Problem ve Önemi
+Tarım ve gıda sektöründe kuru üzüm çeşitlerini doğru bir şekilde tahmin etmek, üreticilere ve işletmelere kalite kontrol süreçlerinde yardımcı olabilir. Bu, üretim süreçlerini optimize etme, kaynakları verimli kullanma ve nihai ürün kalitesini artırma açısından kritik bir öneme sahiptir.
+
+## Projenin Hedefleri
+Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki ilişkiyi veri görselleştirme yöntemleriyle anlamayı daha sonra ise makine öğrenmesi algoritmalarından Logistic Regression, KNN ve SVM tercih edilerek üzüm çeşitlerini diğer özelliklere bağlı kalarak tahmin etmeyi hedeflemekteyim. Sonunda da kullanılan makine öğrenmesi algoritmalarının performanslarını değerlendirmeyi hedefliyorum.
+
+## Veri Temizleme
+Veri temizleme aşamasında aykırı değerler yer alıyordu. Aykırı değerlerden arınmak için filtreleme yöntemi kullanılarak düzeltme yoluna girildi.
+
+## Model Seçimi ve Sonuçlar:
+Model seçim sürecinde Logistic Regresyon, K-Nearest Neighbors ve Support Vector Machine makine öğrenim modelleri değerlendirildi. Bu modellerin veri setindeki özellikleri kullanarak kuru üzüm çeşitlerini başarıyla tahmin edebildiği görüldü. Modellerin başarı oranları üzerinden yapılan testlerde yüksek doğruluk ve hassasiyet elde edildi.
+
+# Raisin Data
+In this study, a dataset consisting of a total of 900 raisin grains, 450 from each of the two different raisin varieties grown in Turkey (Keçimen and Besni), was examined using a machine vision system to distinguish between them. These images underwent various preprocessing steps and went through 7 morphological feature extraction processes using image processing techniques to achieve the following form.
+
+- 1 - Area: Represents the number of pixels within the boundaries of the raisin.
+- 2 - MajorAxisLength: Gives the length of the major axis, the longest line that can be drawn on the raisin.
+- 3 - MinorAxisLength: Gives the length of the minor axis, the shortest line that can be drawn on the raisin.
+- 4 - Eccentricity: Measures the eccentricity of the ellipse with the same moments.
+- 5 - ConvexArea: Gives the number of pixels in the smallest convex hull of the region created by the raisin.
+- 6 - Extent: Gives the ratio of the total pixels in the bounding box of the region created by the raisin.
+- 7 - Perimeter: Measures the perimeter by calculating the distance between the boundaries of the raisin and surrounding pixels.
+- 8 - Class: Keçimen and Besni raisin.
+
+Eccentricity for an ellipse is a dimensionless parameter that measures how far the shape is from being a perfect circle. The eccentricity value ranges from 0 to 1.
+
+- Eccentricity 0: The ellipse is a perfect circle.
+- As Eccentricity approaches 1, the ellipse becomes longer and "flattened," resembling a thin oval shape.
+- Eccentricity exactly 1: The shape is a parabola.
+- If Eccentricity is greater than 1, the shape becomes a hyperbola.
 
 ## Installation
 - Clone the repository:
@@ -62,3 +76,26 @@ Before running the script, make sure to import the libraries in the requirements
     - Analyzes the working principle by calling the imported functions
 - api_methods.py
     - Contains functions
+
+## Project Purpose
+To predict the two types of raisins in the dataset based on other morphological features.
+
+## Problem and Importance
+Accurately predicting the types of raisin varieties in the agriculture and food sector can help producers and businesses in quality control processes. This is critical for optimizing production processes, efficiently using resources, and improving the overall product quality.
+
+## Project Goals
+At this point, using this dataset, my goal is to first understand the relationship between features using data visualization methods and then predict grape varieties based on other features by using machine learning algorithms such as Logistic Regression, KNN, and SVM. Finally, I aim to evaluate the performance of the machine learning algorithms used.
+
+## Data Cleaning
+During the data cleaning stage, there were outliers. To get rid of outliers, a filtering method was used for correction.
+
+## Model Selection and Results
+In the model selection process, Logistic Regression, K-Nearest Neighbors, and Support Vector Machine machine learning models were evaluated. It was observed that these models successfully predicted grape varieties based on dataset features. Tests based on model success rates yielded high accuracy and precision.
+
+
+
+
+
+
+
+
