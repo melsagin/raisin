@@ -102,7 +102,7 @@ def find_best_k(X_train, y_train, max_k=20):
 
     return best_k
 
-# 2 veya daha fazla aykırı değer içeren satırları kaldırmak için bir fonksiyon tanımla
+# 2 veya daha fazla aykırı değer içeren satırları kaldırmak için bir fonksiyon
 def remove_outliers(X, y):
 
    # Her sütun için çeyreklikleri hesapla
@@ -122,5 +122,5 @@ def remove_outliers(X, y):
     # 2'den fazla aykırı değer içeren satırları kaldır
     X_clean = X[num_outliers <= 2]
     y_clean = y[num_outliers <= 2]
-    
+
     return X_clean, y_clean
