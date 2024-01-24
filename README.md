@@ -99,18 +99,3 @@ During the data cleaning stage, there were outliers. To get rid of outliers, a f
 In the model selection process, Logistic Regression was applied due to the logarithmic relationship between variables and the binary nature of the predicted target variable (0 and 1). K-Nearest Neighbors was chosen because the data points exhibited close clustering, and Support Vector Machine was employed for its ability to create a hyperplane with a high margin to effectively separate the two classes. The models were tested with the highest accuracy rates, and with a random_state of 39, KNN achieved the highest performance with 88%, while SVM with 87% and LR with 86% closely followed other models.
 
 Based on these performance results, it can be observed that the utilized models demonstrated similar performance rates and successfully predicted grape varieties.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
