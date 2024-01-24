@@ -29,6 +29,8 @@ Scripti çalıştırmadan önce, requirements.txt içerisindeki kütüphaneleri 
     - İçe aktarılan fonksiyonlar çağrılarak çalışma prensibi analiz edilir
 - method.py 
     - Fonksiyonları içerir
+- data (raisin.csv)
+    - Veri setinin bulunduğu dosyadır
 
 ## Projeinin Amacı
 Veri setindeki iki çeşit kuru üzümün diğer morfolojik özelliklerden yola çıkarak doğru tahmin edilmesi.
@@ -43,7 +45,9 @@ Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki il
 Veri temizleme aşamasında aykırı değerler yer alıyordu. Aykırı değerlerden arınmak için filtreleme yöntemi kullanılarak düzeltme yoluna girildi.
 
 ## Model Seçimi ve Sonuçlar:
-Model seçim sürecinde Logistic Regresyon, K-Nearest Neighbors ve Support Vector Machine makine öğrenim modelleri değerlendirildi. Bu modellerin veri setindeki özellikleri kullanarak kuru üzüm çeşitlerini başarıyla tahmin edebildiği görüldü. Modellerin başarı oranları üzerinden yapılan testlerde yüksek doğruluk ve hassasiyet elde edildi.
+Model seçim sürecinde değişkenler arasındaki logaritmik ilişki ve tahmin edilen hedef değişkenin binary (0 ve 1) olmasından dolayı Logistic Regresyon, veri noktalarının birbirine yakın bir kümelenme göstermiş olmaları nedeniyle K-Nearest Neighbors ve çoklu bağlantı sorunundan etkilenmemesinin yanı sra veriyi bir hiperdüzlem kurarak yüksek marj ile iki sınıfa bölebilmesi nedeniyle Support Vector Machine modelleri uygulandı. Modellerin en yüksek başarı oranları üzerinden yapılan testlerde random_state= 39 iken KNN %88 ile en yüksek performansı verirken, SVM %87 ile LR ise %86 ile diğer modelleri takip etmiştir. 
+
+Bu performans verilerinden yola çıkarak kullanılan modellerin biribirine yakın performans oranları gösterdiği ve kuru üzüm çeşitlerini başarıyla tahmin edebildiği görüldü.
 
 # Raisin Data
 In this study, a dataset consisting of a total of 900 raisin grains, 450 from each of the two different raisin varieties grown in Turkey (Keçimen and Besni), was examined using a machine vision system to distinguish between them. These images underwent various preprocessing steps and went through 7 morphological feature extraction processes using image processing techniques to achieve the following form.
@@ -76,6 +80,8 @@ Before running the script, make sure to import the libraries in the requirements
     - Analyzes the working principle by calling the imported functions
 - api_methods.py
     - Contains functions
+- data (raisin.csv)
+    - File which contain dataset
 
 ## Project Purpose
 To predict the two types of raisins in the dataset based on other morphological features.
@@ -90,7 +96,16 @@ At this point, using this dataset, my goal is to first understand the relationsh
 During the data cleaning stage, there were outliers. To get rid of outliers, a filtering method was used for correction.
 
 ## Model Selection and Results
-In the model selection process, Logistic Regression, K-Nearest Neighbors, and Support Vector Machine machine learning models were evaluated. It was observed that these models successfully predicted grape varieties based on dataset features. Tests based on model success rates yielded high accuracy and precision.
+In the model selection process, Logistic Regression was applied due to the logarithmic relationship between variables and the binary nature of the predicted target variable (0 and 1). K-Nearest Neighbors was chosen because the data points exhibited close clustering, and Support Vector Machine was employed for its ability to create a hyperplane with a high margin to effectively separate the two classes. The models were tested with the highest accuracy rates, and with a random_state of 39, KNN achieved the highest performance with 88%, while SVM with 87% and LR with 86% closely followed other models.
+
+Based on these performance results, it can be observed that the utilized models demonstrated similar performance rates and successfully predicted grape varieties.
+
+
+
+
+
+
+
 
 
 
