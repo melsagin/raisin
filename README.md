@@ -43,18 +43,18 @@ Bu noktada ben de bu verisetini kullanarak öncelikle özellikler arasındaki il
 
 ## Ön Bulgular
 Ön Analiz sonucunda feauture’lar arasında logaritmik bir ilişki olduğunu ve sınıflandırma modellerine uygun olduğu görüldü. 
-•	Besni değer olarak daha fazla yayılım gösterirken Keçimen daha dar bir yayılım göstermiştir.
-•	Besni ve Keçimen türünün sayıları eşittir.
-•	Feauture’ler arasında yüksek korelasyon tespit edilmiştir.
+- Besni değer olarak daha fazla yayılım gösterirken Keçimen daha dar bir yayılım göstermiştir.
+- Besni ve Keçimen türünün sayıları eşittir.
+- Feauture’ler arasında yüksek korelasyon tespit edilmiştir.
 
 ## Veri Temizleme
 Veri temizleme aşamasında eksik veri yoktu ancak daha önce görselleştirme kısmındaki box plot örneğinden aykırı değerler olabileceğine dair bir öngörü oluştu.
 Bu noktada aykırı değerleri çıkarabilmek için IQR (Çeyrekler Arası Aralık) yöntemi kullanılmıştır. Bu yöntem
-•	İlk çeyrek (Q1) ve üçüncü çeyrek (Q3) bulunur
-•	IQR hesaplanır = Q3 – Q1 
-•	Üst sınır hesaplanır = Q3 + (1,5 * IQR) 
-•	Alt sınır hesaplanır = Q1 – (1,5 * IQR) 
-•	Sınırların dışında kalan tüm değerler, satır bazında iki taneden fazlasysa aykırı değer olarak kabul edilir.
+- İlk çeyrek (Q1) ve üçüncü çeyrek (Q3) bulunur
+- IQR hesaplanır = Q3 – Q1 
+- Üst sınır hesaplanır = Q3 + (1,5 * IQR) 
+- Alt sınır hesaplanır = Q1 – (1,5 * IQR) 
+- Sınırların dışında kalan tüm değerler, satır bazında iki taneden fazlasysa aykırı değer olarak kabul edilir.
 aşamalarını kapsayan bir yöntemdir. 
 
 Bu yöntem sonucunda aykırı değerlere ağırlıklı olarak Besni türünde rastlanmaktadır (Besni [33/35], Keçimen[2/35]) bu da modelimin tahmin aşamasında aslında işe yarayan niteliğe sahip olabileceğini göstermektedir bu nedenle aykırı değerler silinmeden modellerin oluşturulup test edilmesine karar verilmiştir. Ancak modelin değerlendirilmesi kısmında aykırı değerler ile nasıl bir sonuç verileceğine dair de bir kısım bulunmaktadır.
@@ -115,19 +115,19 @@ At this point, by using this dataset, my primary goal is to first understand the
 ## Preliminary Findings
 As a result of preliminary analysis, it was observed that there is a logarithmic relationship between the features and that it is suitable for classification models.
 
-Besni shows more dispersion as a value, while Keçimen shows a narrower dispersion.
-The numbers of Besni and Keçimen types are equal.
-High correlation between features was detected.
+- Besni shows more dispersion as a value, while Keçimen shows a narrower dispersion.
+- The numbers of Besni and Keçimen types are equal.
+- High correlation between features was detected.
 
 ## Data Cleaning
 There was no missing data in the data cleaning stage, but there was a prediction that there might be outliers based on the box plot example in the visualization part.
 To remove outliers, the IQR (Interquartile Range) method was used. This method involves the following steps:
 
-Find the first quartile (Q1) and the third quartile (Q3).
-Calculate IQR = Q3 - Q1.
-Calculate the upper limit = Q3 + (1.5 * IQR).
-Calculate the lower limit = Q1 - (1.5 * IQR).
-All values outside the limits are considered outliers if there are more than two on a row.
+- Find the first quartile (Q1) and the third quartile (Q3).
+- Calculate IQR = Q3 - Q1.
+- Calculate the upper limit = Q3 + (1.5 * IQR).
+- Calculate the lower limit = Q1 - (1.5 * IQR).
+- All values outside the limits are considered outliers if there are more than two on a row.
 
 As a result of this method, it was mainly encountered with outliers in the Besni type (Besni [33/35], Keçimen[2/35]). This indicates that outliers may actually have a meaningful quality in the prediction stage of the model. Therefore, it was decided to create and test models without deleting outliers. However, there is also a part about how the model will perform with outliers in the evaluation stage of the model.
 
